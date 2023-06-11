@@ -2,7 +2,7 @@
 /**
  * article save and update
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 /**

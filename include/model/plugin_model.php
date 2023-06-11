@@ -2,7 +2,7 @@
 /**
  * plugin model
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 class Plugin_Model {

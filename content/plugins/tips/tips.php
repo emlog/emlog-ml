@@ -5,7 +5,7 @@ Version: 3.0
 Plugin URL:
 Description: Display a usage tip on the home page of the background, and it can also be used as a demo for plug-in development.
 Author: emlog
-Author URL: https://www.emlog.net
+Author URL: https://emlog.io
 */
 
 !defined('EMLOG_ROOT') && exit('access deined!');

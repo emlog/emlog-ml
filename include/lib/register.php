@@ -2,7 +2,7 @@
 /**
  * register check
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 class Register {
@@ -44,7 +44,7 @@ class Register {
 
         $emcurl = new EmCurl();
         $emcurl->setPost(['emkey' => $emkey]);
-        $emcurl->request('https://www.emlog.net/proauth/register');
+        $emcurl->request('https://emlog.io/proauth/register');
         if ($emcurl->getHttpStatus() !== 200) {
             return false;
         }

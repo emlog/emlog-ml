@@ -2,7 +2,7 @@
 /**
  * media sort model
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 class MediaSort_Model {

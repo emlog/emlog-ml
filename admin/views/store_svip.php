@@ -44,7 +44,7 @@
         </div>
     <?php else: ?>
         <div class="col-md-12">
-<!--vot-->            <p class="alert alert-warning m-3"><?=lang('not_svip')?>, <a href="https://www.emlog.net/register"><?=lang('paid_support')?></a></p>
+<!--vot-->            <p class="alert alert-warning m-3"><?=lang('not_svip')?>, <a href="https://emlog.io/register"><?=lang('paid_support')?></a></p>
         </div>
     <?php endif ?>
 </div>

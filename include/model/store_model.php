@@ -2,7 +2,7 @@
 /**
  * store model
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 class Store_Model {
@@ -41,7 +41,7 @@ class Store_Model {
             'sid'       => $sid
         ];
         $emcurl->setPost($post_data);
-        $emcurl->request('https://www.emlog.net/store/pro');
+        $emcurl->request('https://emlog.io/store/pro');
 
         $retStatus = $emcurl->getHttpStatus();
         if ($retStatus !== MSGCODE_SUCCESS) {

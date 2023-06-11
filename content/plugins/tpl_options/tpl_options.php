@@ -2,7 +2,7 @@
 /*
 Plugin Name: Template options plugin
 Version: 4.2.1
-Plugin URL: https://www.emlog.net/plugin/detail/377
+Plugin URL: https://emlog.io/plugin/detail/377
 Description: Emlog PRO template options plug-in, which provides richer setting functions for templates.
 Author: Adventure, Blue Leaf, emlog official
 */

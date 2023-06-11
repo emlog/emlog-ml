@@ -48,7 +48,7 @@
 <!--vot-->              <input class="form-control" id="emkey" name="emkey" placeholder="<?= lang('enter_reg_code') ?>" minlength="32" maxlength="32" required>
                     </div>
                     <div class="form-group">
-                        <a href="https://www.emlog.net/register" target="_blank"><?= lang('get_emkey') ?>&rarr; </a>
+                        <a href="https://emlog.io/register" target="_blank"><?= lang('get_emkey') ?>&rarr; </a>
                     </div>
                 </div>
                 <div class="modal-footer">

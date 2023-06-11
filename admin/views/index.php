@@ -149,9 +149,9 @@
                 <h6 class="card-header"><?= lang('official_news') ?></h6>
                 <div class="card-body" id="admindex_msg">
                     <ul class="list-group list-group-flush">
-                        <li class="msg_type_0"><a href="https://www.emlog.net/docs/#/faq" target="_blank"><?=lang('help_faq')?></a></li>
-                        <li class="msg_type_0"><a href="https://www.emlog.net/docs/#/" target="_blank"><?=lang('app_development')?></a></li>
-                        <li class="msg_type_0"><a href="https://www.emlog.net/docs/#/contact" target="_blank"><?=lang('contacts')?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/faq" target="_blank"><?=lang('help_faq')?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/" target="_blank"><?=lang('app_development')?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/contact" target="_blank"><?=lang('contacts')?></a></li>
                         <li class="msg_type_0"><a href="https://emlog.cn/" target="_blank"><?=lang('feedback')?></a></li>
                     </ul>
                 </div>
@@ -175,7 +175,7 @@
         $("#menu_panel").addClass('active');
         $.get("./upgrade.php?action=check_update", function (result) {
             if (result.code == 200) {
-/*vot*/         $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://www.emlog.net/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
+/*vot*/         $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.io/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
             }
         });
     </script>

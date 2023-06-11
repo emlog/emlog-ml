@@ -28,11 +28,11 @@ emlog is a lightweight blog and CMS website building system, dedicated to creati
 
 ## Download
 
-[Download emlog pro](https://www.emlog.net/download)
+[Download emlog pro](https://emlog.io/download)
 
 ## Changelog
 
-[changelog](https://www.emlog.net/docs/#/changelog)
+[changelog](https://emlog.io/docs/#/changelog)
 
 ## Requirements
 

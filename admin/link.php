@@ -2,7 +2,7 @@
 /**
  * links
  * @package EMLOG
- * @link https://www.emlog.net
+ * @link https://emlog.io
  */
 
 /**
