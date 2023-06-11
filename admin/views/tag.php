@@ -46,7 +46,7 @@
                         </div>
                     <?php endforeach ?>
                 <?php else: ?>
-                <p class="m-3"><?= lang('tags_no_info') ?></p>
+                    <p class="m-3"><?= lang('tags_no_info') ?></p>
                 <?php endif ?>
             </div>
         </div>
@@ -56,11 +56,11 @@
             <div class="col-auto my-1">
                 <div class="custom-control custom-checkbox mr-sm-2">
                     <input type="checkbox" class="custom-control-input" id="checkAllCard">
-                    <label class="custom-control-label" for="checkAllCard"><?=lang('select_all')?></label>
+                    <label class="custom-control-label" for="checkAllCard"><?= lang('select_all') ?></label>
                 </div>
             </div>
             <div class="col-auto my-1 form-inline">
-                <a href="javascript:tagact('del');" class="btn btn-sm btn-danger"><?=lang('delete')?></a>
+                <a href="javascript:tagact('del');" class="btn btn-sm btn-danger"><?= lang('delete') ?></a>
             </div>
         </div>
         <div class="page"><?= $pageurl ?></div>
@@ -121,7 +121,7 @@
                 title: lang('tag_delete_sure'),
                 text: lang('delete_not_recover'),
                 icon: 'warning',
-                buttons: [lang('cancel), lang('ok')],
+                buttons: [lang('cancel'), lang('ok')],
                 dangerMode: true,
             }).then((willDelete) => {
                 if (willDelete) {
@@ -138,10 +138,10 @@
     function deltags() {
         var tid = $('#tid').val()
         swal({
-/*vot*/     title: lang('tag_delete_sure'),
-/*vot*/     text: lang('delete_not_recover'),
+            /*vot*/     title: lang('tag_delete_sure'),
+            /*vot*/     text: lang('delete_not_recover'),
             icon: 'warning',
-/*vot*/     buttons: [lang('cancel'), lang('ok')],
+            /*vot*/     buttons: [lang('cancel'), lang('ok')],
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {

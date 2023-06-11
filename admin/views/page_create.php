@@ -25,7 +25,7 @@
             <div class="form-group">
                 <label><?= lang('page_template') ?>:</label>
                 <?php if ($customTemplates):
-                    $sortListHtml = '<option value=""><?= lang('default') ?></option>';
+                    $sortListHtml = '<option value="">' . lang('default') . '</option>';
                     foreach ($customTemplates as $v) {
                         $select = $v['filename'] == $template ? 'selected="selected"' : '';
                         $sortListHtml .= '<option value="' . str_replace('.php', '', $v['filename']) . '" ' . $select . '>' . ($v['comment']) . '</option>';
@@ -82,7 +82,7 @@
                 <form action="media.php?action=operate_media" method="post" name="form_media" id="form_media">
                     <div class="row" id="image-list"></div>
                     <div class="text-center">
-                        <button type="button" class="btn btn-success btn-sm mt-2" id="load-more"><?=lang('load_more')?></button>
+                        <button type="button" class="btn btn-success btn-sm mt-2" id="load-more"><?= lang('load_more') ?></button>
                     </div>
                 </form>
             </div>

@@ -11,8 +11,10 @@
     <ul class="nav nav-pills">
         <li class="nav-item"><a class="nav-link active" href="./store.php"><i class="icofont-paint"></i> <?= lang('ext_store_templates') ?></a></li>
         <li class="nav-item"><a class="nav-link" href="./store.php?action=plu"><?= lang('ext_store_plugins') ?></a></li>
-<!--vot-->        <li class="nav-item"><a class="nav-link" href="./store.php?action=svip"><?=lang('svip')?></a></li>
-<!--vot-->        <li class="nav-item"><a class="nav-link" href="./store.php?action=mine"><?=lang('my_apps')?></a></li>
+        <!--vot-->
+        <li class="nav-item"><a class="nav-link" href="./store.php?action=svip"><?= lang('svip') ?></a></li>
+        <!--vot-->
+        <li class="nav-item"><a class="nav-link" href="./store.php?action=mine"><?= lang('my_apps') ?></a></li>
     </ul>
 </div>
 
@@ -34,7 +36,7 @@
             <div class="input-group">
                 <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control small" placeholder="<?= lang('temlate_search') ?>">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-success" type="submit"><?= lang('search' ?></button>
+                    <button class="btn btn-outline-success" type="submit"><?= lang('search') ?></button>
                 </div>
             </div>
         </form>
@@ -55,25 +57,25 @@
                         <div class="card-body">
                             <p class="card-text font-weight-bold">
                                 <?php if ($v['top'] === 1): ?>
-<!--vot-->                                <span class="badge badge-success p-1"><?=lang('recommend_today')?></span>
+                                    <!--vot-->                                <span class="badge badge-success p-1"><?= lang('recommend_today') ?></span>
                                 <?php endif; ?>
                                 <a class="text-secondary" href="<?= $v['buy_url'] ?>" target="_blank"><?= subString($v['name'], 0, 22) ?></a>
                             </p>
                             <p class="card-text text-muted">
                                 <small><?= subString($v['info'], 0, 56) ?></small><br><br>
-<!--vot-->                      <?= lang('price') ?>:<?= $v['price'] > 0 ? '<span class="text-danger">' . $v['price'] . ' ' . lang('price_unit') ?> . '</span>' : '<span class="text-success">' . lang('free') . '</span>' ?><br>
+                                <!--vot--> <?= lang('price') ?>:<?= $v['price'] > 0 ? '<span class="text-danger">' . $v['price'] . ' ' . lang('price_unit') . '</span>' : '<span class="text-success">' . lang('free') . '</span>' ?><br>
                                 <small>
-<!--vot-->                          <?= lang('developer') ?>:<?= $v['author'] ?> <a href="./store.php?author_id=<?= $v['author_id'] ?>"><?=lang('this_author_only')?></a><br>
-<!--vot-->                          <?= lang('version_number') ?>:<?= $v['ver'] ?><br>
-<!--vot-->                          <?= lang('update_time') ?>:<?= $v['update_time'] ?><br>
+                                    <!--vot--> <?= lang('developer') ?>:<?= $v['author'] ?> <a href="./store.php?author_id=<?= $v['author_id'] ?>"><?= lang('this_author_only') ?></a><br>
+                                    <!--vot--> <?= lang('version_number') ?>:<?= $v['ver'] ?><br>
+                                    <!--vot--> <?= lang('update_time') ?>:<?= $v['update_time'] ?><br>
                                 </small>
                             </p>
                             <div class="card-text d-flex justify-content-between">
                                 <div class="installMsg"></div>
                                 <?php if ($v['price'] > 0): ?>
-<!--vot-->                          <a href="https://www.emlog.net/order/submit/tpl/<?= $v['id'] ?>" class="btn btn-danger" target="_blank"><?= lang('go_buy') ?></a>
+                                    <!--vot-->                          <a href="https://www.emlog.net/order/submit/tpl/<?= $v['id'] ?>" class="btn btn-danger" target="_blank"><?= lang('go_buy') ?></a>
                                 <?php else: ?>
-<!--vot-->                                <a href="#" class="btn btn-success installBtn" data-url="<?= urlencode($v['download_url']) ?>" data-type="tpl"><?= lang('install_free') ?></a>
+                                    <!--vot-->                                <a href="#" class="btn btn-success installBtn" data-url="<?= urlencode($v['download_url']) ?>" data-type="tpl"><?= lang('install_free') ?></a>
                                 <?php endif ?>
                             </div>
                         </div>
@@ -81,7 +83,7 @@
                 </div>
             <?php endforeach ?>
         </div>
-        <div class="col-md-12 page my-5"><?= $pageurl ?> (<?=lang('have')?> <?= $count ?><?=lang('_templates')?>)</div>
+        <div class="col-md-12 page my-5"><?= $pageurl ?> (<?= lang('have') ?> <?= $count ?><?= lang('_templates') ?>)</div>
     <?php else: ?>
         <div class="col-md-12">
             <div class="alert alert-info"><?= lang('store_no_results') ?></div>
