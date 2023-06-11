@@ -3,9 +3,6 @@ if (!defined('EMLOG_ROOT')) {
     exit('error!');
 }
 $isdraft = $draft ? '&draft=1' : '';
-$isDisplaySort = !$sid ? "style=\"display:none;\"" : '';
-$isDisplayTag = !$tagId ? "style=\"display:none;\"" : '';
-$isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 ?>
 <?php if (isset($_GET['active_del'])): ?>
     <div class="alert alert-success"><?= lang('deleted_ok') ?></div><?php endif ?>
@@ -34,7 +31,7 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 <?php if (isset($_GET['active_unck'])): ?>
     <div class="alert alert-success"><?= lang('rejected_ok') ?></div><?php endif ?>
 <?php if (isset($_GET['error_post_per_day'])): ?>
-    <div class="alert alert-danger"><?=lang('daily_posts_exceed')?></div><?php endif ?>
+    <div class="alert alert-danger"><?= lang('daily_posts_exceed') ?></div><?php endif ?>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"><?= $draft ? lang('draft_manage') : lang('post_manage') ?></h1>
     <a href="./article.php?action=write" class="btn btn-sm btn-success shadow-sm mt-4"><i class="icofont-pencil-alt-5"></i> <?= lang('article_add') ?></a>
@@ -125,11 +122,11 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
                                 <?php if ($value['top'] == 'y'): ?><span class="badge small badge-success"><?= lang('home_top') ?></span><?php endif ?>
                                 <?php if ($value['sortop'] == 'y'): ?><span class="badge small badge-info"><?= lang('category_top') ?></span><?php endif ?>
                                 <?php if ($value['timestamp'] > time()): ?><span class="badge small badge-warning"><?= lang('publish_regular') ?></span><?php endif ?>
-<!--vot:Lock Char-->            <?php if ($value['password']): ?><span class="small">&#128274;</span><?php endif ?>
-<!--vot:Link Char-->            <?php if ($value['link']): ?><span class="small">&#x1F517;</span><?php endif ?>
+                                <!--vot:Lock Char--> <?php if ($value['password']): ?><span class="small">&#128274;</span><?php endif ?>
+                                <!--vot:Link Char--> <?php if ($value['link']): ?><span class="small">&#x1F517;</span><?php endif ?>
                                 <?php if (!$draft && $value['checked'] == 'n'): ?>
-<!--vot-->                          <span class="badge small badge-secondary"><?= lang('is_pending') ?></span><br>
-<!--vot-->                          <small class="text-secondary"><?= $value['feedback'] ? lang('feedback_review') . $value['feedback'] : '' ?></small>
+                                    <!--vot-->                          <span class="badge small badge-secondary"><?= lang('is_pending') ?></span><br>
+                                    <!--vot-->                          <small class="text-secondary"><?= $value['feedback'] ? lang('feedback_review') . $value['feedback'] : '' ?></small>
                                 <?php endif ?>
                             </td>
                             <td><a href="comment.php?gid=<?= $value['gid'] ?>" class="badge badge-info"><?= $value['comnum'] ?></a></td>
@@ -144,7 +141,7 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
                                 <?php endif ?>
                                 <?php if (!$draft && User::haveEditPermission() && $author_role == User::ROLE_WRITER): ?>
                                     <a class="badge badge-warning"
-<!--vot-->                             href="#" data-gid="<?= $value['gid'] ?>" data-toggle="modal" data-target="#uncheckModel"><?= lang('uncheck') ?></a>
+                                    <!--vot-->                             href="#" data-gid="<?= $value['gid'] ?>" data-toggle="modal" data-target="#uncheckModel"><?= lang('uncheck') ?></a>
                                 <?php endif ?>
                                 <?php if ($draft): ?>
                                     <a href="javascript: em_confirm(<?= $value['gid'] ?>, 'draft', '<?= LoginAuth::genToken() ?>');" class="badge badge-danger"><?= lang('delete') ?></a>
@@ -240,16 +237,17 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 <script>
     function logact(act) {
         if (getChecked('ids') == false) {
-/*vot*/     swal("", lang('select_article'), "info");
+            /*vot*/
+            swal("", lang('select_article'), "info");
             return;
         }
 
         if (act == 'del') {
             swal({
-/*vot*/         title: lang('sure_delete_articles'),
-/*vot*/         text: lang('delete_not_recover'),
+                /*vot*/         title: lang('sure_delete_articles'),
+                /*vot*/         text: lang('delete_not_recover'),
                 icon: 'warning',
-/*vot*/         buttons: [lang('cancel'), lang('ok')],
+                /*vot*/         buttons: [lang('cancel'), lang('ok')],
                 dangerMode: true,
             }).then((willDelete) => {
                 if (willDelete) {
@@ -265,7 +263,8 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 
     function changeSort(obj) {
         if (getChecked('ids') == false) {
-/*vot*/     swal("", lang('select_post_to_operate'), "info");
+            /*vot*/
+            swal("", lang('select_article'), "info");
             return;
         }
         if ($('#sort').val() == '') return;
@@ -275,7 +274,8 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 
     function changeAuthor(obj) {
         if (getChecked('ids') == false) {
-/*vot*/     swal("", lang('select_post_to_operate'), "info");
+            /*vot*/
+            swal("", lang('select_article'), "info");
             return;
         }
         if ($('#author').val() == '') return;
@@ -285,7 +285,8 @@ $isDisplayUser = !$uid ? "style=\"display:none;\"" : '';
 
     function changeTop(obj) {
         if (getChecked('ids') == false) {
-/*vot*/     swal("", lang('select_post_to_operate'), "info");
+            /*vot*/
+            swal("", lang('select_article'), "info");
             return;
         }
         if ($('#top').val() == '') return;

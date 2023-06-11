@@ -41,7 +41,7 @@
             <div class="form-group">
                 <label for="template"><?= lang('category_template') ?></label>
                 <?php if ($customTemplates):
-                    $sortListHtml = '<option value=""><?= lang('default') ?></option>';
+                    $sortListHtml = '<option value="">' . lang('default') . '</option>';
                     foreach ($customTemplates as $v) {
                         $select = $v['filename'] == $template ? 'selected="selected"' : '';
                         $sortListHtml .= '<option value="' . str_replace('.php', '', $v['filename']) . '" ' . $select . '>' . ($v['comment']) . '</option>';

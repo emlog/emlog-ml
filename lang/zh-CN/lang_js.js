@@ -6,16 +6,16 @@ var LNG = {
 
 //---------------------------
 //admin/views/plugin.php
-    'update'				: '更新',//'Update',
-    'plugin_update_check_fail'		: '插件更新检查无法正常进行,错误码:',//'Plug-in update check failed, error code: ',
-    'plugin_update_check_exception'	: '插件更新检查异常： ',//'Plugin update check exception: ',
+    'update': '更新',//'Update',
+    'plugin_update_check_fail': '插件更新检查无法正常进行,错误码:',//'Plug-in update check failed, error code: ',
+    'plugin_update_check_exception': '插件更新检查异常： ',//'Plugin update check exception: ',
 
 //---------------------------
 //admin/views/signup.php
-    'send_email_code'	: '发送邮件验证码',//'Send email verification code',
-    'code_valid_for'	: '已发送,请查收邮件 ',//'Sent successfully, please check your email in ',
-    '_seconds'		: '秒',//' seconds',
-    'test_mail_failed'	: '发送失败',//'Failed to send',
+    'send_email_code': '发送邮件验证码',//'Send email verification code',
+    'code_valid_for': '已发送,请查收邮件 ',//'Sent successfully, please check your email in ',
+    '_seconds': '秒',//' seconds',
+    'test_mail_failed': '发送失败',//'Failed to send',
 
 //---------------------------
 //admin/views/tag.php
@@ -24,8 +24,8 @@ var LNG = {
 
 //---------------------------
 //admin/views/template.php
-'update_api_error':	'更新接口返回错误',//'The update interface returned an error',
-'update_request_error':	'请求更新接口失败',//'The request to update the interface failed',
+    'update_api_error': '更新接口返回错误',//'The update interface returned an error',
+    'update_request_error': '请求更新接口失败',//'The request to update the interface failed',
 
 //---------------------------
 //admin/views/js/common.js
@@ -79,33 +79,33 @@ var LNG = {
     'draft_del_sure': '确定要删除该篇草稿吗？',//'Are you sure you want to delete this draft? ',
     'media_category_del_sure': '确定要删除该资源分类吗（不会删除资源文件）？',//'Are you sure you want to delete this resource category (resource files will not be deleted)?',
     'media_select': '请选择要移动的资源',//'Please select a media file to move',
- 'delete_not_recover'	: '删除后可能无法恢复',//'Deleted may not be recoverable',
- 'ok'			: '确定',//'OK',
- 'cancel'		: '取消',//'Cancel',
- 'category_not_deleted'	: '不会删除分类下资源文件',//'The resource files under the category will not be deleted',
- 'emlog_not_registered'	: '您的emlog pro尚未注册',//'Your emlog has not been registered',
- 'register'		: '去注册',//'Register',
- 'is_latest_version'	: '已经是最新版本',//'Already the latest version',
- 'update_expired'	: '更新服务已到期',//'Update service has expired',
- 'log_in_renew'		: '登录官网续期',//'Log in to the official website to renew',
- 'new_ver_available'	: '有可用的新版本 ',//'There is a new version available ',
- 'check_for_new'	: '查看更新内容',//'Check out what\'s new',
- 'update_now'		: '现在更新',//'Update now',
- 'check_failed'		: '检查失败，可能是网络问题',//'Check failed, may be a network problem',
- 'updating_now'		: '正在更新中，请耐心等待',//'Updating, please wait patiently',
- 'updated_ok'		: '恭喜您！更新成功了，请<a href="./">刷新页面</a>开始体验新版emlog',//'Congratulations! The update is successful, please <a href="./">refresh the page</a> to start experiencing the new emlog',
- 'update_download_fail'	: '下载更新失败，可能是服务器网络问题',//'Failed to download the update, it may be a server network problem',
- 'unzip_fail'		: '解压更新失败，可能是你的服务器空间不支持zip模块',//'Failed to decompress and update. your server does not support zip',
- 'update_not_writable'	: '更新失败，目录不可写',//'Update failed, the directory is not writable',
- 'update_fail'		: '更新失败',//'Update failed',
- 'save_first'		: '请先保存页面！',//'Please save the page first!',
- 'content_empty'	: '页面内容不能为空！',//'Page content cannot be empty!',
- 'plugin'		: '插件：',//'Plugin: ',
- 'template'		: '模板：',//'Template: ',
- 'buy'			: '购买',//'Buy',
- 'go_store_install'	: '去商店安装',//'Go to the store to install',
- 'free'			: '免费',//'Free',
- 'price'		: '应用售价',//'Price: ',
+    'delete_not_recover': '删除后可能无法恢复',//'Deleted may not be recoverable',
+    'ok': '确定',//'OK',
+    'cancel': '取消',//'Cancel',
+    'category_not_deleted': '不会删除分类下资源文件',//'The resource files under the category will not be deleted',
+    'emlog_not_registered': '您的emlog pro尚未注册',//'Your emlog has not been registered',
+    'register': '去注册',//'Register',
+    'is_latest_version': '已经是最新版本',//'Already the latest version',
+    'update_expired': '更新服务已到期',//'Update service has expired',
+    'log_in_renew': '登录官网续期',//'Log in to the official website to renew',
+    'new_ver_available': '有可用的新版本 ',//'There is a new version available ',
+    'check_for_new': '查看更新内容',//'Check out what\'s new',
+    'update_now': '现在更新',//'Update now',
+    'check_failed': '检查失败，可能是网络问题',//'Check failed, may be a network problem',
+    'updating_now': '正在更新中，请耐心等待',//'Updating, please wait patiently',
+    'updated_ok': '恭喜您！更新成功了，请<a href="./">刷新页面</a>开始体验新版emlog',//'Congratulations! The update is successful, please <a href="./">refresh the page</a> to start experiencing the new emlog',
+    'update_download_fail': '下载更新失败，可能是服务器网络问题',//'Failed to download the update, it may be a server network problem',
+    'unzip_fail': '解压更新失败，可能是你的服务器空间不支持zip模块',//'Failed to decompress and update. your server does not support zip',
+    'update_not_writable': '更新失败，目录不可写',//'Update failed, the directory is not writable',
+    'update_fail': '更新失败',//'Update failed',
+    'save_first': '请先保存页面！',//'Please save the page first!',
+    'content_empty': '页面内容不能为空！',//'Page content cannot be empty!',
+    'plugin': '插件：',//'Plugin: ',
+    'template': '模板：',//'Template: ',
+    'buy': '购买',//'Buy',
+    'go_store_install': '去商店安装',//'Go to the store to install',
+    'free': '免费',//'Free',
+    'price': '应用售价',//'Price: ',
 
 //---------------------------
 //include/lib/js/common_tpl.js
@@ -128,9 +128,9 @@ var LNG = {
 
 //---------------------------
 //admin/views/js/media-lib.js
-'insert_to_article'	: '插入文章',//'Insert to the article',
-'set_cover'		: '设为封面',//'Set as cover',
-'file_size'		: '文件大小：',//'File size: ',
+    'insert_to_article': '插入文章',//'Insert to the article',
+    'set_cover': '设为封面',//'Set as cover',
+    'file_size': '文件大小：',//'File size: ',
 
 //----------------
 // The LAST key. DO NOT EDIT!!!

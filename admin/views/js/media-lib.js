@@ -21,7 +21,7 @@ function loadImages() {
                 } else if (image.media_type === 'audio') {
                     insertBtnHtml = '<a href="javascript:insert_media_audio(\'' + image.media_url + '\')" class="btn" title="' + lang('insert_to_article') + '"><i class="icofont-plus"></i></a>';
                 } else {
-                    insertBtnHtml = '<a href="javascript:insert_media(\'' + image.media_url + '\', \'' + image.media_name + '\')" class="btn" title="' + <?=lang('insert_to_article') + '"><i class="icofont-plus"></i></a>';
+                    insertBtnHtml = '<a href="javascript:insert_media(\'' + image.media_url + '\', \'' + image.media_name + '\')" class="btn" title="' + lang('insert_to_article') + '"><i class="icofont-plus"></i></a>';
                 }
                 var cardHtml = '<div class="col-md-4">' +
                     '<div class="card mb-2 shadow-sm">' +
