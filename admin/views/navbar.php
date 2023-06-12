@@ -19,8 +19,6 @@
     <div class="alert alert-danger"><?= lang('nav_select_category') ?></div><?php endif ?>
 <?php if (isset($_GET['error_e'])): ?>
     <div class="alert alert-danger"><?= lang('nav_select_page') ?></div><?php endif ?>
-<?php if (isset($_GET['error_f'])): ?>
-    <div class="alert alert-danger"><?= lang('nav_url_invalid') ?></div><?php endif ?>
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"><?= lang('nav_manage') ?></h1>
 </div>
@@ -80,9 +78,11 @@
                                 <td><?= $value['url'] ?></td>
                                 <td>
                                     <?php if ($value['hide'] == 'n'): ?>
-                                        <a href="navbar.php?action=hide&amp;id=<?= $value['id'] ?>" class="badge badge-primary"><?= lang('visible') ?></a>
+                                        <a href="navbar.php?action=hide&amp;id=<?= $value['id'] ?>"
+                                           class="badge badge-primary"><?= lang('visible') ?></a>
                                     <?php else: ?>
-                                        <a href="navbar.php?action=show&amp;id=<?= $value['id'] ?>" class="badge badge-warning"><?= lang('hidden') ?></a>
+                                        <a href="navbar.php?action=show&amp;id=<?= $value['id'] ?>"
+                                           class="badge badge-warning"><?= lang('hidden') ?></a>
                                     <?php endif ?>
                                     <?php if ($value['isdefault'] == 'n'): ?>
                                         <a href="javascript: em_confirm(<?= $value['id'] ?>, 'navi', '<?= LoginAuth::genToken() ?>');"
@@ -97,7 +97,8 @@
                                     <tr>
                                         <td>
                                             <input type="hidden" name="navi[]" value="<?= $val['id'] ?>"/>
-                                            ---- <a href="navbar.php?action=mod&amp;navid=<?= $val['id'] ?>"><?= $val['naviname'] ?></a>
+                                            ----
+                                            <a href="navbar.php?action=mod&amp;navid=<?= $val['id'] ?>"><?= $val['naviname'] ?></a>
                                         </td>
                                         <td><?= $value['type_name'] ?></td>
                                         <td>
@@ -107,9 +108,11 @@
                                         <td><?= $val['url'] ?></td>
                                         <td>
                                             <?php if ($val['hide'] == 'n'): ?>
-                                                <a href="navbar.php?action=hide&amp;id=<?= $val['id'] ?>" class="badge badge-primary"><?= lang('visible') ?></a>
+                                                <a href="navbar.php?action=hide&amp;id=<?= $val['id'] ?>"
+                                                   class="badge badge-primary"><?= lang('visible') ?></a>
                                             <?php else: ?>
-                                                <a href="navbar.php?action=show&amp;id=<?= $val['id'] ?>" class="badge badge-warning"><?= lang('hidden') ?></a>
+                                                <a href="navbar.php?action=show&amp;id=<?= $val['id'] ?>"
+                                                   class="badge badge-warning"><?= lang('hidden') ?></a>
                                             <?php endif ?>
                                             <?php if ($val['isdefault'] == 'n'): ?>
                                                 <a href="javascript: em_confirm(<?= $val['id'] ?>, 'navi', '<?= LoginAuth::genToken() ?>');"
@@ -126,7 +129,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class="list_footer"><input type="submit" value="<?= lang('order_change') ?>" class="btn btn-sm btn-success"/></div>
+            <div class="list_footer"><input type="submit" value="<?= lang('order_change') ?>"
+                                            class="btn btn-sm btn-success"/></div>
         </form>
     </div>
 </div>
@@ -141,7 +145,8 @@
                     <input class="form-control" name="naviname" placeholder="<?= lang('nav_name') ?>" required/>
                 </div>
                 <div class="form-group">
-                    <textarea maxlength="512" class="form-control" placeholder="<?= lang('nav_url') ?>" name="url" id="url" required/></textarea>
+                    <textarea maxlength="512" class="form-control" placeholder="<?= lang('nav_url') ?>" name="url"
+                              id="url" required/></textarea>
                 </div>
                 <div class="form-group">
                     <label><?= lang('nav_parent') ?></label>
@@ -180,7 +185,8 @@
                                 continue;
                             }
                             ?>
-                            <div class="form-group"><input type="checkbox" style="vertical-align:middle;" name="sort_ids[]" value="<?= $value['sid'] ?>" class="ids"/>
+                            <div class="form-group"><input type="checkbox" style="vertical-align:middle;"
+                                                           name="sort_ids[]" value="<?= $value['sid'] ?>" class="ids"/>
                                 <?= $value['sortname'] ?>
                             </div>
                             <?php
@@ -189,7 +195,9 @@
                                 $value = $sorts[$key];
                                 ?>
                                 <div class="form-group">
-                                    &nbsp; &nbsp; &nbsp; <input type="checkbox" style="vertical-align:middle;" name="sort_ids[]" value="<?= $value['sid'] ?>" class="ids"/>
+                                    &nbsp; &nbsp; &nbsp; <input type="checkbox" style="vertical-align:middle;"
+                                                                name="sort_ids[]" value="<?= $value['sid'] ?>"
+                                                                class="ids"/>
                                     <?= $value['sortname'] ?>
                                 </div>
                             <?php
@@ -217,13 +225,16 @@
                     foreach ($pages as $key => $value):
                         ?>
                         <div class="form-group">
-                            <input type="checkbox" style="vertical-align:middle;" name="pages[<?= $value['gid'] ?>]" value="<?= $value['title'] ?>" class="ids"/>
+                            <input type="checkbox" style="vertical-align:middle;" name="pages[<?= $value['gid'] ?>]"
+                                   value="<?= $value['title'] ?>" class="ids"/>
                             <?= $value['title'] ?>
                         </div>
                     <?php endforeach ?>
-                    <div class="form-group"><input type="submit" class="btn btn-sm btn-success" name="" value="<?= lang('save') ?>"></div>
+                    <div class="form-group"><input type="submit" class="btn btn-sm btn-success" name=""
+                                                   value="<?= lang('save') ?>"></div>
                 <?php else: ?>
-                    <div class="form-group"><?= lang('pages_no') ?>, <a href="page.php?action=new"><?= lang('add_page') ?></a></div>
+                    <div class="form-group"><?= lang('pages_no') ?>, <a
+                                href="page.php?action=new"><?= lang('add_page') ?></a></div>
                 <?php endif ?>
             </form>
         </div>

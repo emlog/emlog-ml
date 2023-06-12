@@ -54,10 +54,6 @@ if ($action == 'add') {
         emDirect("./navbar.php?error_a=1");
     }
 
-    if (!preg_match("/^(http|https|ftp):\/\/.*$/i", $url)) {
-        emDirect("./navbar.php?error_f=1");
-    }
-
     $Navi_Model->addNavi($naviname, $url, $taxis, $pid, $newtab);
     $CACHE->updateCache('navi');
     emDirect("./navbar.php?active_add=1");
@@ -125,8 +121,8 @@ if ($action == 'update') {
 
     $navi_data = array(
         'naviname' => $naviname,
-        'newtab'   => $newtab,
-        'pid'      => $pid,
+        'newtab' => $newtab,
+        'pid' => $pid,
     );
 
     if (empty($naviname)) {

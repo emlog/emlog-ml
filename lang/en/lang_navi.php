@@ -18,7 +18,6 @@ $lang = array(
     'nav_default_nodelete' => 'You can not delete the default navigation',//'默认导航不能删除',
     'select_category' => 'Please select the category you want to add',//'请选择要添加的分类',
     'select_page' => 'Please select the page you want to add',//'请选择要添加的页面',
-    'nav_url_invalid' => 'Invalid navigation address format (must include the http prefix, etc.)',//'导航地址格式错误(需包含http等前缀)',
     'id' => 'ID',//'序号',
 // 'navigation'		=> 'Navigation',//'导航',
     'type' => 'Type',//'类型',
