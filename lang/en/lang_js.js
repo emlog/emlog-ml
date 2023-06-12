@@ -4,9 +4,21 @@ var LNG = {
     'leave_prompt': 'Leave page prompt',//'离开页面提示',
     'already_edited': '[already edited] ',//'[已修改] ',
 
-    // admin/views/article.php
+// admin/views/article.php
     'select_article': 'Please select an article',//'请选择文章',
     'sure_delete_articles': 'Are you sure you want to delete the selected articles',//'确定要删除所选文章吗',
+
+// admin/views/comment.php
+    'comment_operation_select': 'Please select a comment',//'请选择评论',
+    'comment_selected_delete_sure': 'Are you sure you want to delete the selected comment',//'确定要删除所选评论吗',
+
+// admin/views/media.php
+    'resource_select': 'Please select a resource file',//'请选择资源文件',
+    'resource_del_sure': 'Are you sure you want to delete the selected resource file',//'确定要删除所选资源文件吗',
+
+// admin/views/page.php
+    'select_page_to_operate': 'Please select a page',//'请选择页面',
+    'sure_delete_selected_pages': 'Are you sure you want to delete the selected page',//'确定要删除所选页面吗',
 
 //---------------------------
 //admin/views/plugin.php
@@ -51,7 +63,6 @@ var LNG = {
     'alias_format_must_be': 'Invalid alias. It can not contain \'post\' or \'post-digits\'',//'别名错误，不能为\'post\'或\'post-数字\'',
     'alias_system_conflict': 'Alias error (system conflict)',//'别名错误，与系统链接冲突',
     'alias_link_error_not_saved': 'Invalid Link Alias. Can not be saved automatically.',//'链接别名错误，自动保存失败',
-// 'saving'		: 'Saving',//'正在保存',
     'saving': 'Saving...',//'正在保存中...',
     'saved_ok_time': 'Saved at ',//'保存于：',
     'save_system_error': 'Failed to save, maybe the article cannot be edited or the daily post limit has been reached',//'保存失败，可能文章不可编辑或达到每日发文限额',

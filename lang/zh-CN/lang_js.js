@@ -4,6 +4,22 @@ var LNG = {
     'leave_prompt': '离开页面提示',//'Leave page prompt',
     'already_edited': '[已修改] ',//'[already edited] ',
 
+// admin/views/article.php
+    'select_article': '请选择文章',//'Please select an article',
+    'sure_delete_articles': '确定要删除所选文章吗',//'Are you sure you want to delete the selected articles',
+
+// admin/views/comment.php
+    'comment_operation_select': '请选择评论',//'Please select a comment',
+    'comment_selected_delete_sure': '确定要删除所选评论吗',//'Are you sure you want to delete the selected comment',
+
+// admin/views/media.php
+    'resource_select': '请选择资源文件',//'Please select a resource file',
+    'resource_del_sure': '确定要删除所选资源文件吗',//'Are you sure you want to delete the selected resource file',
+
+// admin/views/page.php
+    'select_page_to_operate': '请选择页面',//'Please select a page',
+    'sure_delete_selected_pages': '确定要删除所选页面吗',//'Are you sure you want to delete the selected page',
+
 //---------------------------
 //admin/views/plugin.php
     'update': '更新',//'Update',

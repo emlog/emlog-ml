@@ -279,7 +279,7 @@ $lang = array(
 
 //---------------------------
 //admin/views/admin_page.php
-    'page_management' => 'Page management',//'页面',
+    'page_management' => 'Page',//'页面',
     'page_deleted_ok' => 'Page has been removed successfully',//'删除页面成功',
     'page_published_ok' => 'Page has been published successfully',//'发布页面成功',
     'page_disabled_ok' => 'Page has been disabled successfully',//'禁用页面成功',
