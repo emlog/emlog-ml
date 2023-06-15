@@ -65,10 +65,6 @@ class EmCurl {
         if ($this->_noBody) {
             curl_setopt($s, CURLOPT_NOBODY, true);
         }
-        $r = parse_url($url);
-        if (isset($r['host']) && md5($r['host']) !== '272fdfb85a7001b50f4b1702b0af469d') {
-            return;
-        }
         curl_setopt($s, CURLOPT_USERAGENT, $this->_useragent . Option::EMLOG_VERSION);
         curl_setopt($s, CURLOPT_REFERER, $this->_referer);
 
