@@ -38,7 +38,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                        <?= lang('pending_review') ?>
+                                                <?= lang('pending_review') ?>
                                             </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="./comment.php?hide=y"><?= $sta_cache['hidecomnum'] ?></a></div>
                                         </div>
@@ -104,11 +104,11 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         EMLOG
                         <?php if (!Register::isRegLocal()) : ?>
-<!--vot-->                  <a href="auth.php"><span class="badge badge-secondary"><?= Option::EMLOG_VERSION ?> <?= lang('unregistered') ?>, <?= lang('click_to_register') ?></span></a>
+                            <!--vot-->                  <a href="auth.php"><span class="badge badge-secondary"><?= Option::EMLOG_VERSION ?> <?= lang('unregistered') ?>, <?= lang('click_to_register') ?></span></a>
                         <?php elseif (Register::getRegType() == 2): ?>
-                            <span class="badge badge-warning"><?= Option::EMLOG_VERSION ?> <?=lang('svip_hard')?></span>
+                            <span class="badge badge-warning"><?= Option::EMLOG_VERSION ?> <?= lang('svip_hard') ?></span>
                         <?php elseif (Register::getRegType() == 1): ?>
-                            <span class="badge badge-success"><?= Option::EMLOG_VERSION ?> <?=lang('vip_friend')?></span>
+                            <span class="badge badge-success"><?= Option::EMLOG_VERSION ?> <?= lang('vip_friend') ?></span>
                         <?php else: ?>
                             <span class="badge badge-success"><?= Option::EMLOG_VERSION ?> <?= lang('registered') ?></span>
                         <?php endif ?>
@@ -149,10 +149,10 @@
                 <h6 class="card-header"><?= lang('official_news') ?></h6>
                 <div class="card-body" id="admindex_msg">
                     <ul class="list-group list-group-flush">
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/faq" target="_blank"><?=lang('help_faq')?></a></li>
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/" target="_blank"><?=lang('app_development')?></a></li>
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/contact" target="_blank"><?=lang('contacts')?></a></li>
-                        <li class="msg_type_0"><a href="https://emlog.cn/" target="_blank"><?=lang('feedback')?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/faq" target="_blank"><?= lang('help_faq') ?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/" target="_blank"><?= lang('app_development') ?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/contact" target="_blank"><?= lang('contacts') ?></a></li>
+                        <li class="msg_type_0"><a href="https://github.com/emlog/emlog-ml/discussions" target="_blank"><?= lang('feedback') ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -160,7 +160,7 @@
         <?php if (Register::isRegLocal() && option::get('accept_app_recs') === 'y'): ?>
             <div class="col-lg-6 mb-4">
                 <div class="card mb-4">
-                <h6 class="card-header"><?=lang('applied_today')?> - <a href="./store.php"><?= lang('app_store') ?></a></h6>
+                    <h6 class="card-header"><?= lang('applied_today') ?> - <a href="./store.php"><?= lang('app_store') ?></a></h6>
                     <div class="card-body" id="admindex_msg">
                         <div class="row" id="app-list"></div>
                     </div>
@@ -175,7 +175,8 @@
         $("#menu_panel").addClass('active');
         $.get("./upgrade.php?action=check_update", function (result) {
             if (result.code == 200) {
-/*vot*/         $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.io/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
+                /*vot*/
+                $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.io/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
             }
         });
     </script>
