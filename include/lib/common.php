@@ -68,12 +68,12 @@ function realUrl() {
     if ($real_url !== NULL) {
         return $real_url;
     }
-    
+
 /*vot*/    $emlog_path = EMLOG_ROOT . '/';
     $script_path = pathinfo($_SERVER['SCRIPT_NAME'], PATHINFO_DIRNAME);
     $script_path = str_replace('\\', '/', $script_path);
     $path_element = explode('/', $script_path);
-    
+
     $this_match = '';
     $best_match = '';
     $current_deep = 0;
@@ -738,11 +738,6 @@ function emZip($orig_fname, $content) {
 function emFetchFile($source) {
     $temp_file = tempnam(EMLOG_ROOT . '/content/cache/', 'tmp_');
     $wh = fopen($temp_file, 'w+b');
-
-    $r = parse_url($source);
-    if (isset($r['host']) && sha1($r['host']) !== '1ca2f71c0b27a1c6dbbf1583dc4d4e422b0683ac') {
-        return FALSE;
-    }
 
     $ctx_opt = set_ctx_option();
     $ctx = stream_context_create($ctx_opt);
