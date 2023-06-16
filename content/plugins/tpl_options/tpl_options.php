@@ -9,6 +9,8 @@ Author: Adventure, Blue Leaf, emlog official
 
 !defined('EMLOG_ROOT') && exit('access deined!');
 
+load_language('plugin/tpl_options');
+
 /**
  * Template settings class
  */
@@ -206,7 +208,7 @@ class TplOptions {
     public function hookAdminHead() {
         echo sprintf('<link rel="stylesheet" href="%s">', $this->_assets . 'main.css?ver=' . urlencode(self::VERSION));
         echo sprintf('<script src="%s"></script>', $this->_assets . 'main.js?ver=' . urlencode(self::VERSION));
-/*vot*/        echo sprintf('<script src="%s"></script>', $this->_lang . 'lang_js.js?ver=' . urlencode(self::VERSION));
+/*vot*/        echo sprintf('<script src="%s"></script>', $this->_lang . '/lang_js.js?ver=' . urlencode(self::VERSION));
     }
 
     /**
