@@ -22,7 +22,7 @@
             </ul>
             <hr>
             <a href="#" class="btn btn-sm btn-primary shadow-lg" data-toggle="modal" data-target="#exampleModal"><?= lang('ok_register_now') ?></a>
-            <a href="https://emlog.net/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?=lang('get_emkey')?></a>
+            <a href="https://emlog.io/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?=lang('get_emkey')?></a>
         </div>
     </div>
 <?php else: ?>

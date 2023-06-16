@@ -139,7 +139,7 @@
                     </div>
                     <div class="card-footer text-center">
                         <a href="auth.php" class="btn btn-sm btn-primary shadow-lg"><?= lang('register_now') ?></a>
-                        <a href="https://emlog.net/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?= lang('get_emkey') ?></a>
+                        <a href="https://emlog.io/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?= lang('get_emkey') ?></a>
                     </div>
                 </div>
             </div>
