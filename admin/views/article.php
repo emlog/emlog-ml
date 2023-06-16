@@ -140,8 +140,7 @@ $isdraft = $draft ? '&draft=1' : '';
                                        href="article.php?action=operate_log&operate=check&gid=<?= $value['gid'] ?>&token=<?= LoginAuth::genToken() ?>"><?= lang('check') ?></a>
                                 <?php endif ?>
                                 <?php if (!$draft && User::haveEditPermission() && $author_role == User::ROLE_WRITER): ?>
-                                    <a class="badge badge-warning"
-                                    <!--vot-->                             href="#" data-gid="<?= $value['gid'] ?>" data-toggle="modal" data-target="#uncheckModel"><?= lang('uncheck') ?></a>
+                                    <!--vot-->  <a class="badge badge-warning" href="#" data-gid="<?= $value['gid'] ?>" data-toggle="modal" data-target="#uncheckModel"><?= lang('uncheck') ?></a>
                                 <?php endif ?>
                                 <?php if ($draft): ?>
                                     <a href="javascript: em_confirm(<?= $value['gid'] ?>, 'draft', '<?= LoginAuth::genToken() ?>');" class="badge badge-danger"><?= lang('delete') ?></a>
