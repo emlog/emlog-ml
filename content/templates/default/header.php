@@ -10,6 +10,7 @@ if (!defined('EMLOG_ROOT')) {
     exit('error!');
 }
 require_once View::getView('module');
+load_language('templates/default');
 ?>
 <!doctype html>
 <html lang="<?= LANG ?>" dir="<?= LANG_DIR ?>">

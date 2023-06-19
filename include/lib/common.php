@@ -69,7 +69,8 @@ function realUrl() {
         return $real_url;
     }
 
-/*vot*/    $emlog_path = EMLOG_ROOT . '/';
+    /*vot*/
+    $emlog_path = EMLOG_ROOT . '/';
     $script_path = pathinfo($_SERVER['SCRIPT_NAME'], PATHINFO_DIRNAME);
     $script_path = str_replace('\\', '/', $script_path);
     $path_element = explode('/', $script_path);
@@ -78,8 +79,9 @@ function realUrl() {
     $best_match = '';
     $current_deep = 0;
     $max_deep = count($path_element);
-    while($current_deep < $max_deep) {
-/*vot*/ $this_match = $this_match . $path_element[$current_deep] . '/';
+    while ($current_deep < $max_deep) {
+        /*vot*/
+        $this_match = $this_match . $path_element[$current_deep] . '/';
         if (substr($emlog_path, strlen($this_match) * (-1)) === $this_match) {
             $best_match = $this_match;
         }
@@ -249,7 +251,8 @@ function pagination($count, $perlogs, $page, $url, $anchor = '') {
     $neighborNum = 1;
     $minKey = 4;
 
-    if ($pnums == 1) return $re;
+    if ($pnums == 1)
+        return $re;
     if ($page >= 1 && $pnums >= 7) {
         $frontContent .= " <a href=\"$urlHome$anchor\">1</a> ";
         $frontContent .= " <em> ... </em> ";
@@ -643,8 +646,9 @@ function chImageSize($img, $max_w, $max_h) {
 if (!function_exists('getGravatar')) {
     function getGravatar($email, $s = 40) {
         $hash = md5($email);
-//vot        $gravatar_url = "//cravatar.cn/avatar/$hash?s=$s";
-/*vot*/        $gravatar_url = "//www.gravatar.com/avatar/$hash?s=$s";
+        //vot        $gravatar_url = "//cravatar.cn/avatar/$hash?s=$s";
+        /*vot*/
+        $gravatar_url = "//www.gravatar.com/avatar/$hash?s=$s";
         doOnceAction('get_Gravatar', $email, $gravatar_url);
 
         return $gravatar_url;
@@ -772,11 +776,13 @@ function emDownFile($source) {
 
     $temp_file = tempnam(EMLOG_ROOT . '/content/cache/', 'tmp_');
     if ($temp_file === false) {
-/*vot*/        emMsg('emDownFile: Failed to create temporary file.');
+        /*vot*/
+        emMsg('emDownFile: Failed to create temporary file.');
     }
     $ret = file_put_contents($temp_file, $content);
     if ($ret === false) {
-/*vot*/        emMsg('emDownFile: Failed to write temporary file.');
+        /*vot*/
+        emMsg('emDownFile: Failed to write temporary file.');
     }
 
     return $temp_file;
@@ -1179,11 +1185,14 @@ function load_language($model = '') {
     }
 
     if ($model && !isset($LANGLIST[$model])) {
-        if(substr($model, 0, 7) == 'plugin/') {
-            $file = EMLOG_ROOT . '/content/plugins/' . substr($model, 7) . '/lang/' . LANG . '/lang.php';
+        if (strpos($model, 'plugins/') === 0) {
+            $file = EMLOG_ROOT . '/content/' . $model . '/lang/' . LANG . '/lang.php';
+        } elseif (strpos($model, 'templates/') === 0) {
+            $file = EMLOG_ROOT . '/content/' . $model . '/lang/' . LANG . '/lang.php';
         } else {
             $file = EMLOG_ROOT . '/lang/' . LANG . '/lang_' . $model . '.php';
         }
+
         if (is_file($file)) {
             $lang = array();
             @require $file;
@@ -1300,7 +1309,7 @@ function backtrace() {
                         $args .= 'Object(' . get_class($a) . ')';
                         break;
                     case 'resource':
-//            $args .= 'Resource('.strstr($a, '#').')';
+                        //            $args .= 'Resource('.strstr($a, '#').')';
                         $args .= $a;
                         break;
                     case 'boolean':
@@ -1313,7 +1322,8 @@ function backtrace() {
                         $args .= 'Unknown';
                 }
             }
-            if (!$args) $args = '&nbsp;';
+            if (!$args)
+                $args = '&nbsp;';
             echo '<td>', $args, '</td>', "\n";
             echo '</tr>', "\n";
         }
@@ -1325,9 +1335,11 @@ function backtrace() {
 // Removes parameter '$key' from '$sourceURL' query string (if present)
 function removeParam($key, $sourceURL) {
     $url = parse_url($sourceURL);
-    if (!isset($url['query'])) return $sourceURL;
+    if (!isset($url['query']))
+        return $sourceURL;
     parse_str($url['query'], $query_data);
-    if (!isset($query_data[$key])) return $sourceURL;
+    if (!isset($query_data[$key]))
+        return $sourceURL;
     unset($query_data[$key]);
     $url['query'] = http_build_query($query_data);
     return build_url($url);

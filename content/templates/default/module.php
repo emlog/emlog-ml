@@ -78,7 +78,7 @@ function widget_tag($title) {
         <div class="unstyle-li tag-container">
             <?php foreach ($tag_cache as $value): ?>
                 <span style="font-size:<?= $value['fontsize'] ?>pt; line-height:30px;">
-                <a href="<?= Url::tag($value['tagurl']) ?>" title="<?= $value['usenum'] ?> <?=lang('_posts')?>" class='tags_side' ><?= $value['tagname'] ?></a></span>
+                <a href="<?= Url::tag($value['tagurl']) ?>" title="<?= $value['usenum'] ?> <?= lang('_posts') ?>" class='tags_side'><?= $value['tagname'] ?></a></span>
             <?php endforeach ?>
         </div>
     </div>
@@ -97,7 +97,8 @@ function widget_sort($title) {
         <ul class="unstyle-li log-classify-f">
             <?php
             foreach ($sort_cache as $value):
-                if ($value['pid'] != 0) continue;
+                if ($value['pid'] != 0)
+                    continue;
                 ?>
                 <li>
                     <a href="<?= Url::sort($value['sid']) ?>" title="<?= $value["description"] ?>"><?= $value['sortname'] ?>
@@ -202,8 +203,8 @@ function widget_search($title) { ?>
         </div>
         <div class="unstyle-li" style="text-align: center;">
             <form name="keyform" method="get" action="<?= BLOG_URL ?>index.php">
-<!--vot-->                  <input name="keyword" class="search form-control" autocomplete="off" aria-label="<?= lang('search') ?>" type="text"/>
-              <input type="submit" value="<?=lang('search')?>">
+                <!--vot--> <input name="keyword" class="search form-control" autocomplete="off" aria-label="<?= lang('search') ?>" type="text"/>
+                <input type="submit" value="<?= lang('search') ?>">
             </form>
         </div>
     </div>
@@ -259,8 +260,8 @@ function blog_navi() {
                 }
                 if ($value['url'] == 'admin' && (!User::isVistor())):
                     ?>
-                    <li class="list-item list-menu"><a href="<?= BLOG_URL ?>admin/" class="nav-link"><?=lang('site_management')?></a></li>
-                    <li class="list-item list-menu"><a href="<?= BLOG_URL ?>admin/account.php?action=logout" class="nav-link"><?=lang('logout')?></a></li>
+                    <li class="list-item list-menu"><a href="<?= BLOG_URL ?>admin/" class="nav-link"><?= lang('site_management') ?></a></li>
+                    <li class="list-item list-menu"><a href="<?= BLOG_URL ?>admin/account.php?action=logout" class="nav-link"><?= lang('logout') ?></a></li>
                     <?php
                     continue;
                 endif;
@@ -292,20 +293,6 @@ function blog_navi() {
                 <li class="list-item list-menu"><a class="nav-link" href="<?= $value['url'] ?>" <?= $newtab ?>><?= $value['naviname'] ?></a></li>
             <?php endif ?>
             <?php endforeach ?>
-
-<!-- Change Language -->
-                <li class="list-item list-menu drop">
-                    <div class="toggle"><?= lang('language') ?>:&nbsp;<img src="<?= ROOT_URL ?>/lang/<?= LANG ?>/flag.gif"></div>
-                    <div class="down"><!-- RIGHT -->
-                        <?php
-                            foreach(LANG_LIST as $l=>$lng) {
-                                $selected = ($_SESSION['LANG'] == $l) ? 'selected="selected"' : '';
-                        ?>
-                        <a href="?language=<?= $l ?>" title="<?= LANG_LIST[$l]['title'] ?>"><img src="<?= ROOT_URL ?>/lang/<?= $l ?>/flag.gif"> <?= LANG_LIST[$l]['name'] ?></a>
-                        <?php } ?>
-                    </div>
-                </li>
-<!-- /Change Language -->
         </ul>
     </div>
 <?php } ?>
@@ -347,7 +334,7 @@ function blog_sort($blogid) {
     <?php if (!empty($sortName)) { ?>
         <a href="<?= Url::sort($sortID) ?>"><?= $sortName ?></a>
     <?php } else { ?>
-          <a href="#" title="<?=lang('uncategorized')?>"><?=lang('no')?></a>
+        <a href="#" title="<?= lang('uncategorized') ?>"><?= lang('no') ?></a>
     <?php }
 } ?>
 <?php
@@ -375,9 +362,11 @@ function blog_tag($blogid) {
     $tag_ids = $tag_model->getTagIdsFromBlogId($blogid);
     $tag_names = $tag_model->getNamesFromIds($tag_ids);
     if (!empty($tag_names)) {
-/*vot*/        $tag = lang('tags') . ': ';
+        /*vot*/
+        $tag = lang('tags') . ': ';
         foreach ($tag_names as $key => $value) {
-/*vot*/        $tag .= "    <a href=\"" . Url::tag(rawurlencode($value)) . "\" class='tags' title='" . lang('tag') . "' >" . htmlspecialchars($value) . '</a>';
+            /*vot*/
+            $tag .= "    <a href=\"" . Url::tag(rawurlencode($value)) . "\" class='tags' title='" . lang('tag') . "' >" . htmlspecialchars($value) . '</a>';
         }
         echo $tag;
     }
@@ -403,10 +392,10 @@ function blog_author($uid) {
 function neighbor_log($neighborLog) {
     extract($neighborLog) ?>
     <?php if ($prevLog): ?>
-        <span class="prev-log"><a href="<?= Url::log($prevLog['gid']) ?>" title="<?= $prevLog['title'] ?>"><?=lang('prev')?></a></span>
+        <span class="prev-log"><a href="<?= Url::log($prevLog['gid']) ?>" title="<?= $prevLog['title'] ?>"><?= lang('prev') ?></a></span>
     <?php endif ?>
     <?php if ($nextLog): ?>
-        <span class="next-log"><a href="<?= Url::log($nextLog['gid']) ?>" title="<?= $nextLog['title'] ?>"><?=lang('next')?></a></span>
+        <span class="next-log"><a href="<?= Url::log($nextLog['gid']) ?>" title="<?= $nextLog['title'] ?>"><?= lang('next') ?></a></span>
     <?php endif ?>
 <?php } ?>
 <?php
@@ -416,7 +405,7 @@ function neighbor_log($neighborLog) {
 function blog_comments($comments) {
     extract($comments);
     if ($commentStacks): ?>
-        <div class="comment-header"><b><?=lang('comments')?>:</b></div>
+        <div class="comment-header"><b><?= lang('comments') ?>:</b></div>
     <?php endif ?>
     <?php
     $isGravatar = Option::get('isgravatar');
@@ -433,7 +422,8 @@ function blog_comments($comments) {
                     <b><?= $comment['poster'] ?> </b><span class="comment-time"><?= $comment['date'] ?></span>
                     <div class="comment-content"><?= $comment['content'] ?></div>
                     <div class="comment-reply">
-<!--vot-->              <button class="com-reply comment-replay-btn"><?=lang('reply')?></button>
+                        <!--vot-->
+                        <button class="com-reply comment-replay-btn"><?= lang('reply') ?></button>
                     </div>
                 </div>
             <?php else: ?>
@@ -441,7 +431,8 @@ function blog_comments($comments) {
                     <b><?= $comment['poster'] ?> </b><span class="comment-time"><?= $comment['date'] ?></span>
                     <div class="comment-content"><?= $comment['content'] ?></div>
                     <div class="comment-reply">
-<!--vot-->              <button class="com-reply comment-replay-btn"><?=lang('reply')?></button>
+                        <!--vot-->
+                        <button class="com-reply comment-replay-btn"><?= lang('reply') ?></button>
                     </div>
                 </div>
             <?php endif ?>
@@ -471,7 +462,7 @@ function blog_comments_children($comments, $children) {
                     <div class="comment-content"><?= $comment['content'] ?></div>
                     <?php if ($comment['level'] < 4): ?>
                         <div class="comment-reply">
-                            <button class="com-reply comment-replay-btn"><?=lang('reply')?></button>
+                        <button class="com-reply comment-replay-btn"><?= lang('reply') ?></button>
                         </div><?php endif ?>
                 </div>
             <?php else: ?>
@@ -480,7 +471,7 @@ function blog_comments_children($comments, $children) {
                     <div class="comment-content"><?= $comment['content'] ?></div>
                     <?php if ($comment['level'] < 4): ?>
                         <div class="comment-reply">
-                            <button class="com-reply comment-replay-btn"><?=lang('reply')?></button>
+                            <button class="com-reply comment-replay-btn"><?= lang('reply') ?></button>
                         </div>
                     <?php endif ?>
                 </div>
@@ -499,7 +490,7 @@ function blog_comments_post($logid, $ckname, $ckmail, $ckurl, $verifyCode, $allo
         <div id="comments">
             <div class="comment-post" id="comment-post">
                 <div class="cancel-reply" id="cancel-reply" style="display:none">
-                    <button class="comment-replay-btn"><?=lang('cancel_reply')?></button>
+                    <button class="comment-replay-btn"><?= lang('cancel_reply') ?></button>
                 </div>
                 <form class="commentform" method="post" name="commentform" action="<?= BLOG_URL ?>index.php?action=addcom" id="commentform"
                       is-chinese="<?= $isNeedChinese ?>">
@@ -509,19 +500,19 @@ function blog_comments_post($logid, $ckname, $ckmail, $ckurl, $verifyCode, $allo
                         <div class="comment-info" id="comment-info">
                             <input class="form-control com_control comment-name" id="info_n" autocomplete="off" type="text" name="comname" maxlength="49"
                                    value="<?= $ckname ?>" size="22"
-                                   tabindex="1" placeholder="<?=lang('nickname')?>*" required/>
+                                   tabindex="1" placeholder="<?= lang('nickname') ?>*" required/>
                             <input class="form-control com_control comment-mail" id="info_m" autocomplete="off" type="text" name="commail" maxlength="128"
                                    value="<?= $ckmail ?>" size="22"
-                                   tabindex="2" placeholder="<?=lang('email')?>" />
+                                   tabindex="2" placeholder="<?= lang('email') ?>"/>
                             <input class="form-control com_control comment-url" id="info_u" autocomplete="off" type="text" name="comurl" maxlength="128"
                                    value="<?= $ckurl ?>" size="22"
-                                   tabindex="3" placeholder="<?=lang('homepage')?>"/>
+                                   tabindex="3" placeholder="<?= lang('homepage') ?>"/>
                         </div>
                     <?php endif ?>
 
                     <span class="com_submit_p">
                         <input class="btn"<?php if ($verifyCode != "") { ?> type="button" data-toggle="modal" data-target="#myModal"<?php } else { ?> type="submit" <?php } ?>
-                               id="comment_submit" value="<?=lang('comment_leave')?>" tabindex="6"/>
+                               id="comment_submit" value="<?= lang('comment_leave') ?>" tabindex="6"/>
                     </span>
                     <?php if ($verifyCode != "") { ?>
                         <!-- Verification window -->
@@ -529,12 +520,12 @@ function blog_comments_post($logid, $ckname, $ckmail, $ckurl, $verifyCode, $allo
                             <div class="modal-dialog">
                                 <div class="modal-content" style="display: table-cell;">
                                     <div class="modal-header" style="border-bottom: 0px;">
-                                        <?=lang('enter_captcha')?>
+                                        <?= lang('enter_captcha') ?>
                                     </div>
                                     <?= $verifyCode ?>
                                     <div class="modal-footer" style="border-top: 0px;">
-                                        <button type="button" class="btn" id="close-modal" data-dismiss="modal"><?=lang('close')?></button>
-                                        <button type="submit" class="btn" id="comment_submit2"><?=lang('submit')?></button>
+                                        <button type="button" class="btn" id="close-modal" data-dismiss="modal"><?= lang('close') ?></button>
+                                        <button type="submit" class="btn" id="comment_submit2"><?= lang('submit') ?></button>
                                     </div>
                                 </div>
                             </div>
