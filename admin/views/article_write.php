@@ -264,7 +264,7 @@
         });
         $modal.on('shown.bs.modal', function () {
             cropper = new Cropper(image, {
-                aspectRatio: 16 / 9,
+                aspectRatio: NaN,
                 viewMode: 1
             });
         }).on('hidden.bs.modal', function () {
