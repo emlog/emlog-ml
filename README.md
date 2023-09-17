@@ -6,12 +6,6 @@
 	<a href="https://emlog.io/docs/#/"><img src="https://img.shields.io/badge/docsify-document-brightgreen" alt="Document" /></a>
 </p>
 
-<h3 align="center">
-
-English | [简体中文](/README.zh-CN.md)
-
-</h3>
-
 # emlog
 
 emlog is a lightweight blog and CMS website building system, dedicated to creating a better personal cloud content management system.
