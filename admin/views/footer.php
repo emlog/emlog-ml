@@ -6,7 +6,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Powered by <a href="http://emlog.io">emlog</span>
+            <span>Powered by <a href="http://emlog.in">emlog</span>
         </div>
     </div>
 </footer>

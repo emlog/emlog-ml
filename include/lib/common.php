@@ -2,7 +2,7 @@
 /**
  * Common function library
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 function emAutoload($class) {

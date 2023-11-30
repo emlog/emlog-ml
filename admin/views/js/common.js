@@ -477,7 +477,7 @@ function checkupdate() {
         } else if (result.code == 1002) {
 /*vot*/            $("#upmsg").html(lang('is_latest_version')).removeClass();
         } else if (result.code == 200) {
-/*vot*/            $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.io/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "', '" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
+/*vot*/            $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.in/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "', '" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
         } else {
 /*vot*/            $("#upmsg").html(lang('check_failed')).removeClass();
         }

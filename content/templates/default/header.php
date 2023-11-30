@@ -1,10 +1,10 @@
 <?php
 /*
 Template Name: Default template
-Template Url: https://emlog.io/template/
+Template Url: https://emlog.in/template/
 Description: Emlog Pro Default template
 Author: emlog official
-Author Url:https://emlog.io
+Author Url:https://emlog.in
 */
 if (!defined('EMLOG_ROOT')) {
     exit('error!');

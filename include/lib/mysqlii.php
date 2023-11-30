@@ -3,7 +3,7 @@
  * MySQLi Database Class
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class MySqlii {

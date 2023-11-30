@@ -139,7 +139,7 @@
                     </div>
                     <div class="card-footer text-center">
                         <a href="auth.php" class="btn btn-sm btn-primary shadow-lg"><?= lang('register_now') ?></a>
-                        <a href="https://emlog.io/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?= lang('get_emkey') ?></a>
+                        <a href="https://emlog.in/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?= lang('get_emkey') ?></a>
                     </div>
                 </div>
             </div>
@@ -149,9 +149,9 @@
                 <h6 class="card-header"><?= lang('official_news') ?></h6>
                 <div class="card-body" id="admindex_msg">
                     <ul class="list-group list-group-flush">
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/faq" target="_blank"><?= lang('help_faq') ?></a></li>
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/" target="_blank"><?= lang('app_development') ?></a></li>
-                        <li class="msg_type_0"><a href="https://emlog.io/docs/#/contact" target="_blank"><?= lang('contacts') ?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.in/docs/#/faq" target="_blank"><?= lang('help_faq') ?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.in/docs/#/" target="_blank"><?= lang('app_development') ?></a></li>
+                        <li class="msg_type_0"><a href="https://emlog.in/docs/#/contact" target="_blank"><?= lang('contacts') ?></a></li>
                         <li class="msg_type_0"><a href="https://github.com/emlog/emlog-ml/discussions" target="_blank"><?= lang('feedback') ?></a></li>
                     </ul>
                 </div>
@@ -176,7 +176,7 @@
         $.get("./upgrade.php?action=check_update", function (result) {
             if (result.code == 200) {
                 /*vot*/
-                $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.io/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
+                $("#upmsg").html(lang('new_ver_available') + result.data.version + ", <a href=\"https://emlog.in/docs/#/changelog\" target=\"_blank\">" + lang('check_for_new') + "</a>, <a id=\"doup\" href=\"javascript:doup('" + result.data.file + "','" + result.data.sql + "');\">" + lang('update_now') + "</a>").removeClass();
             }
         });
     </script>

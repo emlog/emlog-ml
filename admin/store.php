@@ -2,7 +2,7 @@
 /**
  * store
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 /**
@@ -147,7 +147,7 @@ if ($action === 'install') {
 /*vot*/        exit(lang('install_failed'));
     }
 
-    $temp_file = emFetchFile('https://emlog.io/' . $source);
+    $temp_file = emFetchFile('https://emlog.in/' . $source);
     if (!$temp_file) {
 /*vot*/        exit(lang('install_failed_download'));
     }

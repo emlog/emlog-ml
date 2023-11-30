@@ -3,7 +3,7 @@
 </p>
 <p align="center">
 	<a href="https://github.com/emlog/emlog/releases/latest"><img src="https://img.shields.io/github/v/release/emlog/emlog?logo=github" alt="GitHub release" /></a>
-	<a href="https://emlog.io/docs/#/"><img src="https://img.shields.io/badge/docsify-document-brightgreen" alt="Document" /></a>
+	<a href="https://emlog.in/docs/#/"><img src="https://img.shields.io/badge/docsify-document-brightgreen" alt="Document" /></a>
 </p>
 
 # emlog
@@ -28,11 +28,11 @@ emlog is a lightweight blog and CMS website building system, dedicated to creati
 
 ## Download
 
-[Download emlog pro](https://emlog.io/download)
+[Download emlog pro](https://emlog.in/download)
 
 ## Changelog
 
-[changelog](https://emlog.io/docs/#/changelog)
+[changelog](https://emlog.in/docs/#/changelog)
 
 ## Requirements
 

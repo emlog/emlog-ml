@@ -2,7 +2,7 @@
 /**
  * RSS
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 require_once './init.php';
@@ -24,7 +24,7 @@ xmlns:atom="http://www.w3.org/2005/Atom"
 <description><![CDATA[' . Option::get('bloginfo') . ']]></description>
 <link>' . BLOG_URL . '</link>
 <language>' . LANG . '</language>
-<generator>emlog.io</generator>';
+<generator>emlog.in</generator>';
 if (!empty($articles)) {
     foreach ($articles as $value) {
         $link = Url::log($value['id']);

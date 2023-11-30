@@ -3,7 +3,7 @@
  * author's articles
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Author_Controller {

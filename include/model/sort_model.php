@@ -2,7 +2,7 @@
 /**
  * Model: Blog Categories
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Sort_Model {

@@ -3,7 +3,7 @@
  * loading plug-in page
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Plugin_Controller {

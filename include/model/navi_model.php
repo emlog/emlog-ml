@@ -2,7 +2,7 @@
 /**
  * navibar model
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Navi_Model {

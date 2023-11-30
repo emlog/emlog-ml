@@ -22,7 +22,7 @@
             </ul>
             <hr>
             <a href="#" class="btn btn-sm btn-primary shadow-lg" data-toggle="modal" data-target="#exampleModal"><?= lang('ok_register_now') ?></a>
-            <a href="https://emlog.io/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?=lang('get_emkey')?></a>
+            <a href="https://emlog.in/register" target="_blank" class="btn btn-sm btn-success shadow-lg"><?=lang('get_emkey')?></a>
         </div>
     </div>
 <?php else: ?>
@@ -48,7 +48,7 @@
 <!--vot-->              <input class="form-control" id="emkey" name="emkey" placeholder="<?= lang('enter_reg_code') ?>" minlength="32" maxlength="32" required>
                     </div>
                     <div class="form-group">
-                        <a href="https://emlog.io/register" target="_blank"><?= lang('get_emkey') ?>&rarr; </a>
+                        <a href="https://emlog.in/register" target="_blank"><?= lang('get_emkey') ?>&rarr; </a>
                     </div>
                 </div>
                 <div class="modal-footer">

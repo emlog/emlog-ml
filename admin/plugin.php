@@ -2,7 +2,7 @@
 /**
  * plugin management
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 /**
@@ -123,7 +123,7 @@ if ($action === 'check_update') {
         'apps'  => json_encode($plugins),
     ];
     $emcurl->setPost($post_data);
-    $emcurl->request('https://emlog.io/plugin/upgrade');
+    $emcurl->request('https://emlog.in/plugin/upgrade');
     $retStatus = $emcurl->getHttpStatus();
     if ($retStatus !== MSGCODE_SUCCESS) {
 /*vot*/        Output::error(lang('update_failed_network'));
@@ -147,7 +147,7 @@ if ($action === 'upgrade') {
         emDirect("./plugin.php?error_i=1");
     }
 
-    $temp_file = emFetchFile('https://emlog.io/plugin/down/' . $alias);
+    $temp_file = emFetchFile('https://emlog.in/plugin/down/' . $alias);
     if (!$temp_file) {
         emDirect("./plugin.php?error_h=1");
     }

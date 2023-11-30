@@ -2,7 +2,7 @@
 /**
  * Login authentication
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class LoginAuth {

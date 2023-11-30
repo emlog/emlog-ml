@@ -3,7 +3,7 @@
  * comment controller
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Comment_Controller {

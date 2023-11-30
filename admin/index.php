@@ -2,7 +2,7 @@
 /**
  * control panel
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 /**

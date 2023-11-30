@@ -3,7 +3,7 @@
  * Article archiving
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class Record_Controller {

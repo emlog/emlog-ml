@@ -73,7 +73,7 @@
                             <div class="card-text d-flex justify-content-between">
                                 <div class="installMsg"></div>
                                 <?php if ($v['price'] > 0): ?>
-                                    <!--vot-->                          <a href="https://emlog.io/order/submit/tpl/<?= $v['id'] ?>" class="btn btn-danger" target="_blank"><?= lang('go_buy') ?></a>
+                                    <!--vot-->                          <a href="https://emlog.in/order/submit/tpl/<?= $v['id'] ?>" class="btn btn-danger" target="_blank"><?= lang('go_buy') ?></a>
                                 <?php else: ?>
                                     <!--vot-->                                <a href="#" class="btn btn-success installBtn" data-url="<?= urlencode($v['download_url']) ?>" data-type="tpl"><?= lang('install_free') ?></a>
                                 <?php endif ?>

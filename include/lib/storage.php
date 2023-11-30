@@ -3,7 +3,7 @@
  * Data storage class
  *
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 class StorageType {

@@ -2,7 +2,7 @@
 /**
  * templates
  * @package EMLOG
- * @link https://emlog.io
+ * @link https://emlog.in
  */
 
 /**
@@ -102,7 +102,7 @@ if ($action === 'check_update') {
         'apps'  => json_encode($templates),
     ];
     $emcurl->setPost($post_data);
-    $emcurl->request('https://emlog.io/template/upgrade');
+    $emcurl->request('https://emlog.in/template/upgrade');
     $retStatus = $emcurl->getHttpStatus();
     if ($retStatus !== MSGCODE_SUCCESS) {
 /*vot*/        Output::error(lang('update_failed_network'));
@@ -126,7 +126,7 @@ if ($action === 'upgrade') {
         emDirect("./template.php?error_i=1");
     }
 
-    $temp_file = emFetchFile('https://emlog.io/template/down/' . $alias);
+    $temp_file = emFetchFile('https://emlog.in/template/down/' . $alias);
     if (!$temp_file) {
         emDirect("./template.php?error_h=1");
     }
