@@ -7,7 +7,7 @@
 
 class Option {
 
-    const EMLOG_VERSION = 'pro 2.1.8';
+    const EMLOG_VERSION = 'pro 2.1.9';
     const EMLOG_VERSION_TIMESTAMP = 1701315414;
     const UPLOADFILE_PATH = '../content/uploadfile/';
 
@@ -167,7 +167,8 @@ class Option {
     static function updateOption($name, $value, $isSyntax = false) {
         $DB = Database::getInstance();
         $value = $isSyntax ? $value : "'$value'";
-/*vot*/        $sql = 'INSERT INTO ' . DB_PREFIX . "options (option_name, option_value) VALUES ('$name', $value) ON DUPLICATE KEY UPDATE option_value=$value, option_name='$name'";
+        /*vot*/
+        $sql = 'INSERT INTO ' . DB_PREFIX . "options (option_name, option_value) VALUES ('$name', $value) ON DUPLICATE KEY UPDATE option_value=$value, option_name='$name'";
         $DB->query($sql);
     }
 }
