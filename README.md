@@ -2,29 +2,40 @@
   <img src="./admin/views/images/logo.png" width=100 />
 </p>
 <p align="center">
-	<a href="https://github.com/emlog/emlog/releases/latest"><img src="https://img.shields.io/github/v/release/emlog/emlog?logo=github" alt="GitHub release" /></a>
+	<a href="https://github.com/emlog/emlog-ml/releases/latest"><img src="https://img.shields.io/github/v/release/emlog/emlog?logo=github" alt="GitHub release" /></a>
 	<a href="https://emlog.in/docs/#/"><img src="https://img.shields.io/badge/docsify-document-brightgreen" alt="Document" /></a>
 </p>
 
 # emlog
 
-emlog is a lightweight blog and CMS website building system, dedicated to creating a better personal cloud content management system.
+emlog is a lightweight blog and CMS website building system, dedicated to creating a better personal cloud content
+management system.
 
 ## Overview
 
-- [x] Markdown editor, auto save, more comfortable and worry-free creation
-- [x] User registration, login, contribution, management
-- [x] Multimedia resource manager, support upload management of pictures, audio, video, files, etc.
-- [x] Draft box
-- [x] Template themes to create a personalized site
-- [x] Rich plugin extensions
-- [x] Support article URL customization, better SEO effect
-- [x] Flexible sidebar component (widgets) management, easy to combine and customize your favorite components
-- [x] Custom pages to easily create message boards, navigation bars, personal profiles, etc.
-- [x] Multi-person co-writing, easy management of multiple writers in the background
-- [x] tag, secondary classification
-- [x] Data caching technology, faster site access
-- [x] Site data backup/restore
+- Markdown Editor: Built-in Markdown editor with automatic saving, making the writing process more comfortable and
+  efficient.
+- Multiple User Roles: Supports multiple user roles, as well as user registration and login functions, facilitating
+  interaction between readers and authors.
+- Multimedia Resource Manager: Built-in multimedia resource manager for easy uploading and management of various media
+  resources such as images, audio, video, and files.
+- Template Themes: The app store provides a variety of template themes to easily create unique websites with personal
+  style.
+- Plugin Ecosystem: Has a powerful plugin extension system for quickly expanding site functionality to meet specific
+  needs.
+- Powerful SEO Features: Supports customizing article URLs, TDK customization for site and category pages to improve
+  site visibility in search engines.
+- Custom Sidebar Management: Provides flexible sidebar component management.
+- Custom Pages: Supports creating custom pages including message boards, personal introductions, etc., helping you
+  create more personalized and functional websites.
+- Tags and Categories: Articles can be easily categorized and tagged to provide better information organization and
+  retrieval capabilities.
+
+## Quick Start (Docker)
+
+```bash
+$ docker run --name emlog-pro -p 8080:80 -d emlog/emlog:pro-latest-php7.4-apache
+```
 
 ## Download
 
@@ -40,25 +51,7 @@ emlog is a lightweight blog and CMS website building system, dedicated to creati
 * MySQL5.6+, 5.6 is recommended
 * Recommended server environment: Linux + nginx
 
-## Installation Notes
-
-1. Upload all the decompressed files to the web root directory of the server or virtual host, or upload the zip archive and decompress it online.
-2. Visit the pre-resolved domain name on the browser, the program will automatically jump to the emlog installation page, and follow the prompts to install it.
-3. The installation process will not create a database, you need to create it in advance, click to confirm the installation, the installation is successful.
-
-## Docker
-
-1. cp config.sample.php config.php
-2. docker network create emlog_network
-3. docker-compose up
-4. http://localhost:8080
-
-## Special thanks
-
-[![Jet Brains](https://raw.githubusercontent.com/kainonly/ngx-bit/main/resource/jetbrains.svg)](https://www.jetbrains.com/)
-
-Thanks for non - commercial open source development authorization by Jet Brains
-
 ## License Agreement
 
-The license under which the Emlog software is released is the Free Software Foundation's GP Lv3 (or later): [LICENSE](/license.txt)
+The license under which the Emlog software is released is the Free Software Foundation's GP Lv3 (or
+later): [LICENSE](/license.txt)
